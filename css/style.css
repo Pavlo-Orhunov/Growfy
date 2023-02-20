@@ -584,7 +584,61 @@ body._lock {
 .clients__item img {
   max-width: 100%;
 }
-
+/* -----marquee-------------- */
+.clients__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients__slider {
+  height: 64px;
+  position: relative;
+  background: rgba(13, 13, 17, 1);
+  display: flex;
+  overflow: hidden;
+}
+.clients__slide {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 10s linear infinite;
+}
+.clients__slide img {
+  height: 35px;
+  padding: 0 50px;
+}
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.clients__slider::before,
+.clients__slider::after {
+  height: 64px;
+  width: 100px;
+  position: absolute;
+  content: "";
+  background: rgb(13, 13, 17);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 13, 17, 1) 0%,
+    rgba(13, 13, 17, 0.9) 30%,
+    rgba(13, 13, 17, 0) 100%
+  );
+  z-index: 2;
+}
+.clients__slider::before {
+  left: 0;
+  top: 0;
+}
+.clients__slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
 /* --------- services ---------------------- */
 .services {
   padding-top: 80px;
