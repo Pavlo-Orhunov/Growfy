@@ -17,7 +17,7 @@ body {
   background-color: #0d0d11;
 }
 /* _lock для блокирования прокрутки контента страницы при появлении меню  */
-body._lock {
+.body--lock {
   overflow: hidden;
 }
 /* ------------------------------- */
@@ -136,7 +136,7 @@ body._lock {
   background-color: rgba(13, 13, 17, 0.85);
   transition: all 0.3s ease 0s;
 }
-.header._scroll .header__wrapper:hover {
+.header--scrolled .header__wrapper:hover {
   background-color: rgba(13, 13, 17, 0.95);
 }
 .header__container {
@@ -148,14 +148,14 @@ body._lock {
   padding-bottom: 5px;
   transition: all 0.3s ease 0s;
 }
-.header._scroll .header__container {
+.header--scrolled .header__container {
   min-height: 60px;
 }
 @media (max-width: 991.98px) {
   .header__container {
     min-height: 78px;
   }
-  .header._scroll .header__container {
+  .header--scrolled .header__container {
     min-height: 52px;
   }
   .header__wrapper {
