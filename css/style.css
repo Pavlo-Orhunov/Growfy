@@ -125,7 +125,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  min-height: 40px;
+  min-height: 60px;
 }
 .header__wrapper {
   position: fixed;

@@ -1,4 +1,11 @@
 "use strict"
+
+window.addEventListener("load", windowLoad)
+
+function windowLoad() {
+  document.addEventListener("click", documentActions)
+}
+
 // -----Гамбургер меню--------------
 // ищем иконку бургера (.menu__icon)
 const iconMenu = document.querySelector(".icon-menu")
@@ -39,4 +46,29 @@ if (headerElement) {
   headerObserver.observe(headerElement)
 } else {
   console.error("Header element not found.")
+}
+
+function documentActions(e) {
+  const targetElement = e.target
+  // scroll
+  if (targetElement.hasAttribute("data-goto")) {
+    const gotoElement = document.querySelector(`${targetElement.dataset.goto}`)
+    const headerHeight = document.querySelector(`.header`).offsetHeight
+
+    // прячем меню после нажатия на ссылку
+    if (iconMenu.classList.contains("_active")) {
+      document.body.classList.remove("body--lock")
+      iconMenu.classList.remove("_active")
+      menuBody.classList.remove("_active")
+    }
+
+    if (gotoElement) {
+      window.scrollTo({
+        top: gotoElement.offsetTop - headerHeight,
+        behavior: "smooth",
+      })
+    }
+
+    e.preventDefault()
+  }
 }
