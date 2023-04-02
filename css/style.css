@@ -222,16 +222,16 @@ body {
   letter-spacing: 0.96px;
   color: #fff;
 }
-.cart-header__text {
+.cart-header {
   position: relative;
   font-size: 1.1rem;
   transition: all 0.3s ease 0s;
 }
-.cart-header__text::after {
+.cart-header::after {
   content: " ";
   position: absolute;
   display: block;
-  margin-top: 9px;
+  margin-top: 37px;
   background-color: #fff;
   height: 1px;
   width: 0%;
@@ -243,8 +243,8 @@ body {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
 }
-.cart-header__text:hover::after,
-.cart-header__text:active::after {
+.cart-header:hover::after,
+.cart-header:active::after {
   width: 120%;
 }
 .cart-header__quantity {
