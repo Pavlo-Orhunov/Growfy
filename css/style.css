@@ -306,7 +306,7 @@ body {
   .icon-menu span,
   .icon-menu::before,
   .icon-menu::after {
-    left: 0;
+    right: 0;
     position: absolute;
     height: 12%;
     width: 100%;
@@ -325,12 +325,13 @@ body {
     bottom: 0;
   }
   .icon-menu span {
+    width: 85%;
     top: 50%;
-    transform: scale(1) translate(0, -50%);
+    transform: translate(0, -50%);
   }
   /* прячем среднюю полоску при нажатии (_active)*/
   .icon-menu._active span {
-    transform: scale(0) translate(0, -50%);
+    transform: translate(500%, -50%);
   }
   /* делаем крестик из 3-х полосок при нажатии (_active)*/
   .icon-menu._active::before {
