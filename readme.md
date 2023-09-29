@@ -14,7 +14,7 @@
 - decreasing header when scrolling
 - contacts form
 
-**The result of the work can be viewed at the link: **
+**_The result of the work can be viewed at the link:_**
 [Link to the layout Page](https://pavlo-orhunov.github.io/Growfy/)
 _(will open in the same window)_
 
