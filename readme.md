@@ -25,10 +25,10 @@ https://youtu.be/7E6lHqmf4FY
 
 **_Preview for desktop (1920px) layout version:_**
 
-![Desktop version preview](https://github.com/Pavlo-Orhunov/Home-Services/blob/master/images/desktop.jpg "Desktop version preview")
+![Desktop version preview](https://github.com/Pavlo-Orhunov/Growfy/blob/master/img/desktop.jpg "Desktop version preview")
 
 <br>
 
 **_Preview for mobile (320px) layout version:_**
 
-![Mobile version preview](https://github.com/Pavlo-Orhunov/Home-Services/blob/master/images/mobile.jpg "Mobile version preview")
+![Mobile version preview](https://github.com/Pavlo-Orhunov/Growfy/blob/master/img/mobile.jpg "Mobile version preview")
