@@ -5,57 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Growfy</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper">
           <div class="header__container">
-            <a href="./index.html" class="header__logo">
-              <img src="./img/logo.svg" alt="Logo" />
+            <a href="#" class="header__logo">
+              <img src="img/logo.svg" alt="Logo" />
             </a>
             <nav class="header__menu menu">
               <div class="menu__body">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a data-goto=".hero" href="./index.html" class="menu__link"
-                      >Home</a
-                    >
+                    <a data-goto=".hero" href="#" class="menu__link">Home</a>
                   </li>
                   <li class="menu__item">
-                    <a data-goto=".why" href="./index.html" class="menu__link"
-                      >About</a
-                    >
+                    <a data-goto=".why" href="#" class="menu__link">About</a>
                   </li>
                   <li class="menu__item">
-                    <a
-                      data-goto=".advantages"
-                      href="./index.html"
-                      class="menu__link"
+                    <a data-goto=".advantages" href="#" class="menu__link"
                       >Pages</a
                     >
                   </li>
                   <li class="menu__item">
-                    <a
-                      data-goto=".services"
-                      href="./index.html"
-                      class="menu__link"
+                    <a data-goto=".services" href="#" class="menu__link"
                       >Services</a
                     >
                   </li>
                 </ul>
               </div>
             </nav>
-            <a href="./index.html" class="header__cart cart-header">
+            <a href="#" class="header__cart cart-header">
               <div class="cart-header__text">Cart</div>
               <div class="cart-header__quantity">0</div>
             </a>
-            <a href="./index.html" class="header__button button">Get started</a>
+            <a href="#" class="header__button button">Get started</a>
             <button class="icon-menu" type="button">
               <span></span>
             </button>
@@ -86,18 +72,18 @@
             <div class="hero__images images-hero">
               <div class="images-hero__column">
                 <div class="images-hero__item images-hero__item--1">
-                  <img src="./img/hero/01.jpg" alt="Image" />
+                  <img src="img/hero/01.jpg" alt="Image" />
                 </div>
                 <div class="images-hero__item images-hero__item--2">
-                  <img src="./img/hero/02.jpg" alt="Image" />
+                  <img src="img/hero/02.jpg" alt="Image" />
                 </div>
               </div>
               <div class="images-hero__column">
                 <div class="images-hero__item images-hero__item--3">
-                  <img src="./img/hero/03.jpg" alt="Image" />
+                  <img src="img/hero/03.jpg" alt="Image" />
                 </div>
                 <div class="images-hero__item images-hero__item--4">
-                  <img src="./img/hero/04.jpg" alt="Image" />
+                  <img src="img/hero/04.jpg" alt="Image" />
                 </div>
               </div>
             </div>
@@ -108,38 +94,21 @@
             <h2 class="clients__title">
               TRUSTED BY startups and large enterprises
             </h2>
-            <!-- <ul class="clients__items">
-              <li class="clients__item">
-                <img src="./img/clients/01.svg" alt="Client logo" />
-              </li>
-              <li class="clients__item">
-                <img src="./img/clients/02.svg" alt="Client logo" />
-              </li>
-              <li class="clients__item">
-                <img src="./img/clients/03.svg" alt="Client logo" />
-              </li>
-              <li class="clients__item">
-                <img src="./img/clients/04.svg" alt="Client logo" />
-              </li>
-              <li class="clients__item">
-                <img src="./img/clients/05.svg" alt="Client logo" />
-              </li>
-            </ul> -->
             <div class="clients__wrapper">
               <div class="clients__slider">
                 <div class="clients__slide">
-                  <img src="./img/clients/01.svg" alt="Client logo" />
-                  <img src="./img/clients/02.svg" alt="Client logo" />
-                  <img src="./img/clients/03.svg" alt="Client logo" />
-                  <img src="./img/clients/04.svg" alt="Client logo" />
-                  <img src="./img/clients/05.svg" alt="Client logo" />
+                  <img src="img/clients/01.svg" alt="Client logo" />
+                  <img src="img/clients/02.svg" alt="Client logo" />
+                  <img src="img/clients/03.svg" alt="Client logo" />
+                  <img src="img/clients/04.svg" alt="Client logo" />
+                  <img src="img/clients/05.svg" alt="Client logo" />
                 </div>
                 <div class="clients__slide">
-                  <img src="./img/clients/01.svg" alt="Client logo" />
-                  <img src="./img/clients/02.svg" alt="Client logo" />
-                  <img src="./img/clients/03.svg" alt="Client logo" />
-                  <img src="./img/clients/04.svg" alt="Client logo" />
-                  <img src="./img/clients/05.svg" alt="Client logo" />
+                  <img src="img/clients/01.svg" alt="Client logo" />
+                  <img src="img/clients/02.svg" alt="Client logo" />
+                  <img src="img/clients/03.svg" alt="Client logo" />
+                  <img src="img/clients/04.svg" alt="Client logo" />
+                  <img src="img/clients/05.svg" alt="Client logo" />
                 </div>
               </div>
             </div>
@@ -149,7 +118,9 @@
           <div class="services__container">
             <div class="services__content">
               <a href="#" class="services__label label">services</a>
-              <h2 class="services__title title">Services we offer</h2>
+              <h2 data-animated class="services__title title">
+                Services we offer
+              </h2>
               <div class="services__text text">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -157,15 +128,15 @@
                   cursus, mi quis viverra ornare, eros dolor.
                 </p>
               </div>
-              <div class="services__actions">
+              <div data-animated class="services__actions">
                 <a href="#" class="services__button button">All services</a>
               </div>
             </div>
             <div class="services__cards">
-              <div class="services__column">
+              <div data-animated class="services__column">
                 <article class="services__item item-service">
                   <div class="item-service__icon">
-                    <img src="./img/services/01.svg" alt="services" />
+                    <img src="img/services/01.svg" alt="services" />
                   </div>
                   <h3 class="item-service__title">Social Media Marketing</h3>
                   <div class="item-service__text text">
@@ -177,7 +148,7 @@
                 </article>
                 <article class="services__item item-service">
                   <div class="item-service__icon">
-                    <img src="./img/services/02.svg" alt="services" />
+                    <img src="img/services/02.svg" alt="services" />
                   </div>
                   <h3 class="item-service__title">Email Marketing</h3>
                   <div class="item-service__text text">
@@ -188,10 +159,10 @@
                   </div>
                 </article>
               </div>
-              <div class="services__column">
+              <div data-animated class="services__column">
                 <article class="services__item item-service">
                   <div class="item-service__icon">
-                    <img src="./img/services/03.svg" alt="services" />
+                    <img src="img/services/03.svg" alt="services" />
                   </div>
                   <h3 class="item-service__title">Paid Advertising</h3>
                   <div class="item-service__text text">
@@ -203,7 +174,7 @@
                 </article>
                 <article class="services__item item-service">
                   <div class="item-service__icon">
-                    <img src="./img/services/04.svg" alt="services" />
+                    <img src="img/services/04.svg" alt="services" />
                   </div>
                   <h3 class="item-service__title">SEO Optimization</h3>
                   <div class="item-service__text text">
@@ -221,15 +192,15 @@
           <div class="why__container">
             <div class="why__images images-why">
               <div class="images-why__item images-why__item--1">
-                <img src="./img/why/01.jpg" alt="image" />
+                <img src="img/why/01.jpg" alt="image" />
               </div>
               <div class="images-why__item images-why__item--2">
-                <img src="./img/why/02.jpg" alt="image" />
+                <img src="img/why/02.jpg" alt="image" />
               </div>
             </div>
             <div class="why__content">
               <a href="#" class="why__label label">why choose us</a>
-              <h2 class="why__title title">
+              <h2 data-animated class="why__title title">
                 We help great brands scale with content marketing.
               </h2>
               <div class="why__text text">
@@ -248,32 +219,40 @@
             </div>
           </div>
         </section>
-        <section class="page__advantages advantages">
+        <div class="page__advantages advantages">
           <div class="advantages__container">
             <div class="advantages__items">
-              <article class="advantages__item">
-                <h3 class="advantages__value title">1.2M+</h3>
+              <article class="advantages__item digital-counters">
+                <h3 class="advantages__value title">
+                  <span data-digital-counter>1.2</span><span>M+</span>
+                </h3>
                 <div class="advantages__text text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item">
-                <h3 class="advantages__value title">3.4B</h3>
+              <article class="advantages__item digital-counters">
+                <h3 class="advantages__value title">
+                  <span data-digital-counter>3.4</span><span>B</span>
+                </h3>
                 <div class="advantages__text text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item">
-                <h3 class="advantages__value title">98%</h3>
+              <article class="advantages__item digital-counters">
+                <h3 class="advantages__value title">
+                  <span data-digital-counter>98</span><span>%</span>
+                </h3>
                 <div class="advantages__text text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item">
-                <h3 class="advantages__value title">10+</h3>
+              <article class="advantages__item digital-counters">
+                <h3 class="advantages__value title">
+                  <span data-digital-counter>10</span><span>+</span>
+                </h3>
                 <div class="advantages__text text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim.
@@ -281,15 +260,15 @@
               </article>
             </div>
             <div class="advantages__image">
-              <img src="./img/advantages/01.jpg" alt="Image" />
+              <img src="img/advantages/01.jpg" alt="Image" />
             </div>
           </div>
-        </section>
+        </div>
         <section class="page__testimonials testimonials">
           <div class="testimonials__container">
             <div class="testimonials__content">
               <a href="#" class="testimonials__label label">testimonials</a>
-              <h2 class="testimonials__title title">
+              <h2 data-animated class="testimonials__title title">
                 See what our clients say
               </h2>
               <div class="testimonials__body">
@@ -301,7 +280,7 @@
                     ut commodo diam libero.
                   </p>
                 </div>
-                <div class="testimonials__actions">
+                <div data-animated class="testimonials__actions">
                   <a href="#" class="testimonials__button button"
                     >Get in touch</a
                   >
@@ -309,12 +288,15 @@
               </div>
             </div>
             <div class="testimonials__cards">
-              <article class="testimonials__card card-testimonial">
+              <article
+                data-animated
+                class="testimonials__card card-testimonial"
+              >
                 <div class="card-testimonial__user user-testimonial">
                   <div
                     class="user-testimonial__avatar user-testimonial__avatar--1"
                   >
-                    <img src="./img/testimonials/avatars/01.jpg" alt="Avatar" />
+                    <img src="img/testimonials/avatars/01.jpg" alt="Avatar" />
                   </div>
                   <div class="user-testimonial__body">
                     <div class="user-testimonial__name">John Doe</div>
@@ -333,19 +315,22 @@
                   </p>
                 </div>
                 <div class="card-testimonial__rating">
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
                 </div>
               </article>
-              <article class="testimonials__card card-testimonial">
+              <article
+                data-animated
+                class="testimonials__card card-testimonial"
+              >
                 <div class="card-testimonial__user user-testimonial">
                   <div
                     class="user-testimonial__avatar user-testimonial__avatar--2"
                   >
-                    <img src="./img/testimonials/avatars/02.jpg" alt="Avatar" />
+                    <img src="img/testimonials/avatars/02.jpg" alt="Avatar" />
                   </div>
                   <div class="user-testimonial__body">
                     <div class="user-testimonial__name">Alice Smith</div>
@@ -364,19 +349,22 @@
                   </p>
                 </div>
                 <div class="card-testimonial__rating">
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
                 </div>
               </article>
-              <article class="testimonials__card card-testimonial">
+              <article
+                data-animated
+                class="testimonials__card card-testimonial"
+              >
                 <div class="card-testimonial__user user-testimonial">
                   <div
                     class="user-testimonial__avatar user-testimonial__avatar--3"
                   >
-                    <img src="./img/testimonials/avatars/03.jpg" alt="Avatar" />
+                    <img src="img/testimonials/avatars/03.jpg" alt="Avatar" />
                   </div>
                   <div class="user-testimonial__body">
                     <div class="user-testimonial__name">Sophia Miller</div>
@@ -393,11 +381,11 @@
                   </p>
                 </div>
                 <div class="card-testimonial__rating">
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
-                  <img src="./img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
+                  <img src="img/testimonials/star.svg" alt="star" />
                 </div>
               </article>
             </div>
@@ -407,7 +395,7 @@
           <div class="blog__container">
             <div class="blog__content">
               <a href="#" class="blog__label label">blog</a>
-              <h2 class="blog__title title">
+              <h2 data-animated class="blog__title title">
                 Read our <br />
                 articles & news
               </h2>
@@ -420,20 +408,18 @@
                     ut commodo diam libero.
                   </p>
                 </div>
-                <div class="blog__actions">
+                <div data-animated class="blog__actions">
                   <a href="#" class="blog__button button">All Posts</a>
                 </div>
               </div>
             </div>
             <div class="blog__cards">
-              <article class="blog__card card-blog">
+              <article data-animated class="blog__card card-blog">
                 <div class="card-blog__header">
                   <a href="#" class="card-blog__image">
-                    <img src="./img/blog/01.jpg" alt="Image" />
+                    <img src="img/blog/01.jpg" alt="Image" />
                   </a>
-                  <a href="./index.html" class="card-blog__category"
-                    >Social Media</a
-                  >
+                  <a href="#" class="card-blog__category">Social Media</a>
                 </div>
                 <div class="card-blog__body">
                   <div class="card-blog__date">August 28, 2022</div>
@@ -452,12 +438,12 @@
                   <a href="#" class="card-blog__link">Read now</a>
                 </div>
               </article>
-              <article class="blog__card card-blog">
+              <article data-animated class="blog__card card-blog">
                 <div class="card-blog__header">
                   <a href="#" class="card-blog__image">
-                    <img src="./img/blog/02.jpg" alt="Image" />
+                    <img src="img/blog/02.jpg" alt="Image" />
                   </a>
-                  <a href="./index.html" class="card-blog__category">SEO</a>
+                  <a href="#" class="card-blog__category">SEO</a>
                 </div>
                 <div class="card-blog__body">
                   <div class="card-blog__date">August 28, 2022</div>
@@ -476,14 +462,12 @@
                   <a href="#" class="card-blog__link">Read now</a>
                 </div>
               </article>
-              <article class="blog__card card-blog">
+              <article data-animated class="blog__card card-blog">
                 <div class="card-blog__header">
                   <a href="#" class="card-blog__image">
-                    <img src="./img/blog/03.jpg" alt="Image" />
+                    <img src="img/blog/03.jpg" alt="Image" />
                   </a>
-                  <a href="./index.html" class="card-blog__category"
-                    >Strategy</a
-                  >
+                  <a href="#" class="card-blog__category">Strategy</a>
                 </div>
                 <div class="card-blog__body">
                   <div class="card-blog__date">August 28, 2022</div>
@@ -509,7 +493,7 @@
           <div class="start__container">
             <div class="start__body">
               <div class="start__column">
-                <h2 class="start__title">
+                <h2 data-animated class="start__title">
                   Ready to start scaling your business now?
                 </h2>
                 <div class="start__text">
@@ -520,7 +504,7 @@
                 </div>
               </div>
               <div class="start__column">
-                <div class="start__actions">
+                <div data-animated class="start__actions">
                   <a href="#" class="start__button button">Our services</a>
                   <a href="#" class="start__button button button--dark"
                     >Contact us</a
@@ -536,7 +520,7 @@
           <div class="main-footer__container">
             <div class="main-footer__column">
               <a href="#" class="main-footer__logo">
-                <img src="./img/logo.svg" alt="Logo" />
+                <img src="img/logo.svg" alt="Logo" />
               </a>
               <div class="main-footer__text">
                 <p>
@@ -549,27 +533,27 @@
               <ul class="main-footer__social social">
                 <li class="social__item">
                   <a href="#" class="social__link" title="LinkedIn">
-                    <img src="./img/footer/01.svg" alt="social" />
+                    <img src="img/footer/01.svg" alt="social" />
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link" title="Twitter">
-                    <img src="./img/footer/02.svg" alt="social" />
+                    <img src="img/footer/02.svg" alt="social" />
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link" title="Facebook">
-                    <img src="./img/footer/03.svg" alt="social" />
+                    <img src="img/footer/03.svg" alt="social" />
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link" title="YouTube">
-                    <img src="./img/footer/04.svg" alt="social" />
+                    <img src="img/footer/04.svg" alt="social" />
                   </a>
                 </li>
                 <li class="social__item">
                   <a href="#" class="social__link" title="Instagram">
-                    <img src="./img/footer/05.svg" alt="social" />
+                    <img src="img/footer/05.svg" alt="social" />
                   </a>
                 </li>
               </ul>
@@ -644,7 +628,7 @@
               <div class="main-footer__text">
                 <p>Lorem ipsum dolor sit am consectetur adipiscing</p>
               </div>
-              <form action="" class="subscribe">
+              <form action="#" class="subscribe">
                 <input
                   type="email"
                   required
@@ -661,7 +645,7 @@
         </div>
         <div class="footer__bottom bottom-footer">
           <div class="bottom-footer__container">
-            <div class="bottom-footer__copy">&copy; 2022</div>
+            <div class="bottom-footer__copy">&copy; 2023</div>
           </div>
         </div>
       </footer>

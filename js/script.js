@@ -1,31 +1,79 @@
 "use strict"
 
-window.addEventListener("load", windowLoad)
-
-function windowLoad() {
+window.addEventListener("load", () => {
   document.addEventListener("click", documentActions)
-}
+  document.body.classList.add("loaded")
+
+  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop
+  let isScrollingDown = false
+
+  function animateCounter(counter, duration) {
+    let startTimestamp = null
+    const startValue = parseFloat(counter.innerHTML) || 0
+    const startPosition = 0
+    const isDecimal = startValue % 1 !== 0
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+      const value = isDecimal
+        ? startPosition + startValue * progress
+        : Math.round(progress * (startPosition + startValue))
+      counter.innerHTML = isDecimal ? value.toFixed(1) : value.toString()
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
+
+  window.addEventListener("scroll", () => {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop
+    isScrollingDown = currentScrollTop > lastScrollTop
+    lastScrollTop = currentScrollTop
+  })
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (
+          entry.isIntersecting &&
+          entry.intersectionRatio >= 0.3 &&
+          isScrollingDown
+        ) {
+          const counters = entry.target.querySelectorAll(
+            "[data-digital-counter]"
+          )
+          counters.forEach((counter) => {
+            const duration = parseInt(counter.dataset.digitalCounter) || 1000
+            animateCounter(counter, duration)
+          })
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+
+  const sections = document.querySelectorAll(".digital-counters")
+  sections.forEach((section) => {
+    observer.observe(section)
+  })
+})
 
 // -----Гамбургер меню--------------
-// ищем иконку бургера (.menu__icon)
 const iconMenu = document.querySelector(".icon-menu")
-// ищем меню бургера (.menu__body)
 const menuBody = document.querySelector(".menu__body")
-// если .icon-menu найдено, тогда:
 if (iconMenu) {
-  // по клику на иконку меню
   iconMenu.addEventListener("click", function (e) {
-    // добавляем стиль body--lock для блокирования прокрутки контента страницы при появлении меню
     document.body.classList.toggle("body--lock")
-    // переключаем (присваиваем или отбираем) класс _active для иконки бургера
     iconMenu.classList.toggle("_active")
-    // переключаем (присваиваем или отбираем) класс _active для меню бургера
     menuBody.classList.toggle("_active")
   })
 }
 
 // -----Уменьшающийся при скролле header--------------
-// Get the header element
 const headerElement = document.querySelector(".header")
 
 // Define the callback function for the IntersectionObserver
@@ -48,6 +96,7 @@ if (headerElement) {
   console.error("Header element not found.")
 }
 
+// --------- Scroll to Function ----------
 function documentActions(e) {
   const targetElement = e.target
   // scroll
@@ -72,3 +121,45 @@ function documentActions(e) {
     e.preventDefault()
   }
 }
+// --------- END OF Scroll to Function ----------
+
+// ----- animation --------------
+const items = document.querySelectorAll("[data-animated]")
+
+const appearThreshold = 0.3
+
+const appearOptions = {
+  threshold: appearThreshold,
+}
+
+const appearCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && entry.intersectionRatio >= appearThreshold) {
+      entry.target.classList.add("active")
+    } else {
+      entry.target.classList.remove("active")
+    }
+  })
+}
+
+const appearObserver = new IntersectionObserver(appearCallback, appearOptions)
+
+items.forEach((item) => {
+  appearObserver.observe(item)
+})
+
+const animateOnScroll = () => {
+  items.forEach((item) => {
+    const itemTop = item.getBoundingClientRect().top
+    const windowHeight = window.innerHeight
+
+    if (itemTop - windowHeight <= 0) {
+      item.classList.add("active")
+    } else {
+      item.classList.remove("active")
+    }
+  })
+}
+
+window.addEventListener("scroll", animateOnScroll)
+// ----- END OF animation --------------
