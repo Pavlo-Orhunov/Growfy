@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Growfy</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
@@ -49,7 +51,7 @@
         </div>
       </header>
       <main class="page">
-        <section class="page__hero hero">
+        <section class="page__hero hero" id="parallax-container-1">
           <div class="hero__container">
             <div class="hero__content">
               <h1 class="hero__title title">
@@ -71,18 +73,26 @@
             </div>
             <div class="hero__images images-hero">
               <div class="images-hero__column">
-                <div class="images-hero__item images-hero__item--1">
+                <div
+                  class="images-hero__item images-hero__item--1 parallax-item"
+                >
                   <img src="img/hero/01.jpg" alt="Image" />
                 </div>
-                <div class="images-hero__item images-hero__item--2">
+                <div
+                  class="images-hero__item images-hero__item--2 parallax-item"
+                >
                   <img src="img/hero/02.jpg" alt="Image" />
                 </div>
               </div>
               <div class="images-hero__column">
-                <div class="images-hero__item images-hero__item--3">
+                <div
+                  class="images-hero__item images-hero__item--3 parallax-item"
+                >
                   <img src="img/hero/03.jpg" alt="Image" />
                 </div>
-                <div class="images-hero__item images-hero__item--4">
+                <div
+                  class="images-hero__item images-hero__item--4 parallax-item"
+                >
                   <img src="img/hero/04.jpg" alt="Image" />
                 </div>
               </div>
@@ -114,7 +124,7 @@
             </div>
           </div>
         </section>
-        <section class="page__services services">
+        <section class="page__services services" id="parallax-container-2">
           <div class="services__container">
             <div class="services__content">
               <a href="#" class="services__label label">services</a>
@@ -134,7 +144,7 @@
             </div>
             <div class="services__cards">
               <div data-animated class="services__column">
-                <article class="services__item item-service">
+                <article class="services__item item-service parallax-item">
                   <div class="item-service__icon">
                     <img src="img/services/01.svg" alt="services" />
                   </div>
@@ -146,7 +156,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="services__item item-service">
+                <article class="services__item item-service parallax-item">
                   <div class="item-service__icon">
                     <img src="img/services/02.svg" alt="services" />
                   </div>
@@ -160,7 +170,7 @@
                 </article>
               </div>
               <div data-animated class="services__column">
-                <article class="services__item item-service">
+                <article class="services__item item-service parallax-item">
                   <div class="item-service__icon">
                     <img src="img/services/03.svg" alt="services" />
                   </div>
@@ -172,7 +182,7 @@
                     </p>
                   </div>
                 </article>
-                <article class="services__item item-service">
+                <article class="services__item item-service parallax-item">
                   <div class="item-service__icon">
                     <img src="img/services/04.svg" alt="services" />
                   </div>
@@ -219,10 +229,10 @@
             </div>
           </div>
         </section>
-        <div class="page__advantages advantages">
+        <div class="page__advantages advantages" id="parallax-container-3">
           <div class="advantages__container">
             <div class="advantages__items">
-              <article class="advantages__item digital-counters">
+              <article class="advantages__item digital-counters parallax-item">
                 <h3 class="advantages__value title">
                   <span data-digital-counter>1.2</span><span>M+</span>
                 </h3>
@@ -231,7 +241,7 @@
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item digital-counters">
+              <article class="advantages__item digital-counters parallax-item">
                 <h3 class="advantages__value title">
                   <span data-digital-counter>3.4</span><span>B</span>
                 </h3>
@@ -240,7 +250,7 @@
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item digital-counters">
+              <article class="advantages__item digital-counters parallax-item">
                 <h3 class="advantages__value title">
                   <span data-digital-counter>98</span><span>%</span>
                 </h3>
@@ -249,7 +259,7 @@
                   Suspendisse varius enim.
                 </div>
               </article>
-              <article class="advantages__item digital-counters">
+              <article class="advantages__item digital-counters parallax-item">
                 <h3 class="advantages__value title">
                   <span data-digital-counter>10</span><span>+</span>
                 </h3>

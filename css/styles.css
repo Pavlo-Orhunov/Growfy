@@ -596,6 +596,10 @@ body {
 .images-hero__item {
   overflow: hidden;
 }
+.parallax-item {
+  transform: translate(0, 0);
+  transition: transform 0.4s ease-out;
+}
 .images-hero__item--1,
 .images-hero__item--4 {
   border-radius: 50% / 27%;
@@ -1540,21 +1544,14 @@ body {
   background-color: transparent;
   color: inherit;
 }
+.subscribe__input::placeholder {
+  transition: opacity 0.3s ease;
+}
+.subscribe__input:focus::placeholder {
+  opacity: 0;
+}
 .subscribe__button {
   padding: 1rem 24px;
-}
-@media (max-width: 479.98px) {
-  .subscribe {
-    flex-direction: column;
-  }
-  .subscribe__button,
-  .subscribe__input {
-    max-width: none;
-    width: 100%;
-  }
-  .menu-footer__list {
-    gap: 15px;
-  }
 }
 .footer__bottom {
 }
@@ -1574,6 +1571,31 @@ body {
   .bottom-footer__container {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .subscribe__input,
+  .subscribe__button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .subscribe__input,
+  .subscribe__button {
+    width: 75%;
+    max-width: 75%;
+  }
+}
+@media (max-width: 479.98px) {
+  .subscribe {
+    flex-direction: column;
+  }
+  .subscribe__button,
+  .subscribe__input {
+    max-width: none;
+    width: 100%;
+  }
+  .menu-footer__list {
+    gap: 15px;
   }
 }
 /* --------------- animation -------------- */

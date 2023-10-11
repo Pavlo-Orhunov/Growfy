@@ -163,3 +163,62 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll)
 // ----- END OF animation --------------
+
+// ----- parallax --------------
+function updateParallax(container, x, y) {
+  const parallaxItems = container.querySelectorAll(".parallax-item")
+
+  parallaxItems.forEach((item, index) => {
+    let speedX, speedY
+
+    switch (index) {
+      case 0:
+        speedX = 0.05
+        speedY = 0.05
+        break
+      case 1:
+        // speedX = -0.05
+        // speedY = -0.05
+        speedX = -0.1
+        speedY = 0.1
+        break
+      case 2:
+        speedX = 0.1
+        speedY = -0.1
+        break
+      case 3:
+        // speedX = -0.1
+        // speedY = 0.1
+        speedX = -0.05
+        speedY = -0.05
+        break
+      default:
+        speedX = 0
+        speedY = 0
+    }
+    item.style.transform = `translate(${x * speedX}px, ${y * speedY}px)`
+  })
+}
+
+const container1 = document.getElementById("parallax-container-1")
+const container2 = document.getElementById("parallax-container-2")
+const container3 = document.getElementById("parallax-container-3")
+
+container1.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth - e.pageX * 5) / 100
+  const y = (window.innerHeight - e.pageY * 5) / 100
+  updateParallax(container1, x, y)
+})
+
+container2.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth - e.pageX * 5) / 100
+  const y = (window.innerHeight - e.pageY * 5) / 100
+  updateParallax(container2, x, y)
+})
+
+container3.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth - e.pageX * 5) / 100
+  const y = (window.innerHeight - e.pageY * 5) / 100
+  updateParallax(container3, x, y)
+})
+// ----- END OF parallax --------------
